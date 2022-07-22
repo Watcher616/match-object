@@ -71,6 +71,7 @@ h3{
     font-weight: 700;
     display: none;
     position: absolute;
+    white-space: nowrap;
     bottom: 3em;
 }
  button:hover{
@@ -81,7 +82,7 @@ h3{
  }
 
  #game-over{
-    font-size: 5em;
+    font-size: 4em;
     color: rgb(18, 18, 61);
     bottom: 1em;
     display: none;
