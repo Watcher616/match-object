@@ -1,4 +1,11 @@
 
+const play = document.getElementById("play")
+
+
+play.addEventListener("click", ()=>{
+
+
+play.setAttribute('style', 'display: none')
 
 const cardArray = [
     {
@@ -71,7 +78,7 @@ const ScoreDisplay = document.querySelector('#score')
 const messageDisplay =  document.querySelector('#message')
 const button = document.getElementById('button')
 const liveDisplay = document.getElementById('lives')
-
+const gameOverDisplay =  document.getElementById('game-over')
 let live = 5
 let chosenCard = []
 let chosenCardId = []
@@ -107,7 +114,6 @@ function checkMatch(){
         messageDisplay.innerHTML = "Great, you found a match!"
         button.textContent = "Restart"
         button.setAttribute("style", "display: block")
-        
         set()
     }
     else{
@@ -119,7 +125,6 @@ function checkMatch(){
         live = live -1
         liveDisplay.innerHTML = live
         set()
-        checkLives()
         
     }
 
@@ -134,9 +139,7 @@ function checkMatch(){
         button.textContent = "Restart"
         live = live-1
         liveDisplay.innerHTML = live
-        set()
-        checkLives()
-        
+        set()   
         
     }
     
@@ -144,6 +147,7 @@ function checkMatch(){
     chosenCard = []
     chosenCardId = []
     ScoreDisplay.innerHTML = cardWon.length
+    checkLives()
 
     if(cardWon.length == cardArray.length/2){
         messageDisplay.innerHTML = "You found them all!"
@@ -180,11 +184,12 @@ function set(){
 }
 function checkLives(){
     if( live === 0){
-        const card = document.querySelectorAll('.images')
-        card.removeEventListener('click', flipCard)
-        messageDisplay.innerHTML = "Game Over!"
+        live = 0
+        document.querySelectorAll('#cards').forEach((e) => e.parentNode.removeChild(e))
+        gameOverDisplay.setAttribute("style", "display: inline-block")
         button.textContent = "Play Again"
         button.setAttribute("style", "display: block")
     
     }
 }
+})
