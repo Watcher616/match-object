@@ -46,7 +46,9 @@ h3{
 #message{
     height: 29.2px;
     width: 477.29px;
-    white-space: nowrap;
+    white-space: wrap;
+    display: flex;
+    justify-content: center;
     
 }
 
@@ -58,7 +60,7 @@ h3{
     font-weight: 700;
     display: none;
     position: absolute;
-    bottom: 9em;
+    bottom: 7em;
 }
  button:hover{
     color: white;
