@@ -23,6 +23,7 @@ body{
     flex-wrap: wrap;
     height: 16em ;
     width: 21em;
+    margin-bottom: 3.5em;
 
 }
 
@@ -32,6 +33,7 @@ img{
     background-color: antiquewhite;
     border-radius: 10px;
     margin: 2px;
+
 }
 
 h1{
@@ -53,6 +55,10 @@ h3{
     display: flex;
     justify-content: center;
     margin-top: 0.8px;
+    position: relative;
+    position: absolute;
+    bottom: 3.5em;
+    
     
     
 }
@@ -65,7 +71,7 @@ h3{
     font-weight: 700;
     display: none;
     position: absolute;
-    bottom: 6em;
+    bottom: 3em;
 }
  button:hover{
     color: white;
@@ -78,8 +84,9 @@ h3{
     position: absolute;
     font-size: 5em;
     color: rgb(18, 18, 61);
-    bottom: 2em;
+    bottom: 1em;
     display: none;
+    
  }
  #play{
     height: 40px;
