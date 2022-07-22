@@ -81,11 +81,11 @@ h3{
  }
 
  #game-over{
-    position: absolute;
     font-size: 5em;
     color: rgb(18, 18, 61);
     bottom: 1em;
     display: none;
+    white-space:nowrap;
     
  }
  #play{
