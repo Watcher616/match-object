@@ -104,7 +104,7 @@ function checkMatch(){
         images[chosenCardId[0]].removeEventListener('click', flipCard)
         images[chosenCardId[1]].removeEventListener( 'click', flipCard)
         cardWon.push(chosenCard)
-        messageDisplay.innerHTML = "great, you found a match!"
+        messageDisplay.innerHTML = "Great, you found a match!"
         button.textContent = "Restart"
         button.setAttribute("style", "display: block")
         
@@ -129,7 +129,7 @@ function checkMatch(){
         cardWon.pop(chosenCard)
         images[chosenCardId[0]].addEventListener('click', flipCard)
         images[chosenCardId[1]].addEventListener( 'click', flipCard) 
-        messageDisplay.innerHTML = "you clicked the same card!"
+        messageDisplay.innerHTML = "You clicked the same card!"
         button.setAttribute("style", "display: block")
         button.textContent = "Restart"
         live = live-1
