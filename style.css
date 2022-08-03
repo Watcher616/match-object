@@ -55,9 +55,8 @@ h3{
     display: flex;
     justify-content: center;
     margin-top: 0.8px;
-    position: relative;
     position: absolute;
-    bottom: 3.5em;
+    bottom: 0.5em;
     
     
     
